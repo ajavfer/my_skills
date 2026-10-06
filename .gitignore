@@ -1,0 +1,16 @@
+# Ignore my documents
+**/my_*.md
+
+# ignore environment files
+.env
+.venv
+
+# Other common ignores
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+*.log
+.DS_Store
+.vscode
+.idea
