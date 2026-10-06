@@ -1,50 +1,9 @@
-# UI & Dashboards
-streamlit
-plotly
-
-# Text-to-HTML conversions
-markdown2
-
-# Communication with OpenAI-Compatible API (Lemonade)
-openai>=1.0.0
-
-# Environment Management
+# Minimal runtime dependencies for the dialectical council
 python-dotenv
+pydantic
 
-# Google APIs & ADK
 google-adk
 google-genai
 
-# Google Sheets Logging
-gspread
-google-auth
-
-# Python Testing Suite
-pytest
-pytest-asyncio
-
-# System Monitoring (CPU, Memory, Disk, Process stats)
-psutil
-
-# API Communication
-requests
-
-# Machine Learning & Text Processing (Deterministic RAG Pipeline)
-scikit-learn
-pandas
-numpy<2.5     # dependency with joblib 1.5.3
-joblib>=1.5.3 # currently latest version is 1.5.3
-
-# Vector Database and Semantic RAG
 pypdf
 python-docx
-faiss-cpu
-
-# Statistical Evaluation & Diagnostics (Evals & Plots)
-scipy
-matplotlib
-seaborn
-statsmodels
-
-# Presentation Generation (optional)
-# python-pptx
