@@ -424,14 +424,12 @@ def main():
     # Save output to Markdown (.md) file
     try:
         script_dir = os.path.dirname(os.path.abspath(__file__))
-        parent_dir = os.path.dirname(script_dir)
-        log_dir = os.path.join(parent_dir, "logs")
-
-        if os.path.exists(log_dir) and os.path.isdir(log_dir):
-            timestamp = datetime.now().strftime("%Y%m%d_%H%M%S")
-            output_path = os.path.join(log_dir, f"council_report_{timestamp}.md")
-        else:
-            output_path = args.output
+        reports_dir = os.path.join(script_dir, "reports")
+        os.makedirs(reports_dir, exist_ok=True)
+        output_name = os.path.basename(args.output)
+        report_name, extension = os.path.splitext(output_name)
+        timestamp = datetime.now().strftime("%Y%m%d_%H%M%S")
+        output_path = os.path.join(reports_dir, f"{report_name}_{timestamp}{extension}")
 
         with open(output_path, "w", encoding="utf-8") as f:
             f.write(synthesis_md)
